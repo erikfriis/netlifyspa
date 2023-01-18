@@ -152,7 +152,12 @@ function App() {
 
 			<div className={AppCSS.siteContainer}>
 				<div>
-					{productPage &&< ProductItemPage productsData={productsData} setProductPage={setProductPage} />}
+					{productPage && (
+						<ProductItemPage
+							productsData={productsData}
+							setProductPage={setProductPage}
+						/>
+					)}
 				</div>
 				<div>
 					<PriceFilter setMin={setMin} setMax={setMax} />
@@ -165,7 +170,6 @@ function App() {
 					productsData={filteredProducts}
 					addToCart={addToCart}
 					toggleAddFavorites={toggleAddFavorites}
-
 					setProductPage={setProductPage}
 					// searchBarFilter={searchBarFilter}
 					favorites={favorites}
